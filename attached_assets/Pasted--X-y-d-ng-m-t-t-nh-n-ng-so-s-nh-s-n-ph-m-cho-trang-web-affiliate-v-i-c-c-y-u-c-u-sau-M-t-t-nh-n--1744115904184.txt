@@ -1,0 +1,45 @@
+"Xây dựng một tính năng so sánh sản phẩm cho trang web affiliate với các yêu cầu sau:
+
+Mô tả tính năng:
+Khi người dùng chọn một sản phẩm bất kỳ (ví dụ: tai nghe Sony WH-1000XM5), AI tự động tìm và hiển thị các sản phẩm cùng loại (ví dụ: tai nghe over-ear khác như Bose QuietComfort 45, Apple AirPods Max).
+Giao diện hiển thị dưới dạng bảng hoặc card so sánh, với nút 'So sánh ngay' để kích hoạt.
+Tính năng so sánh dựa trên các tiêu chí cụ thể, được AI tự động điền dữ liệu từ database sản phẩm.
+Các tiêu chí so sánh (đề xuất):
+Giá cả: Giá hiện tại hoặc giá đã giảm (nếu có khuyến mãi).
+Thương hiệu: Tên thương hiệu của sản phẩm.
+Điểm đánh giá: Rating trung bình từ người dùng (ví dụ: 4.5/5).
+Tính năng nổi bật: Các đặc điểm chính (ví dụ: chống ồn, pin 20h, chất lượng âm bass).
+Trọng lượng/Kích thước: Thông số vật lý (nếu áp dụng).
+Thời gian bảo hành: Số tháng/năm bảo hành.
+Ưu điểm: Điểm mạnh ngắn gọn (ví dụ: 'Âm thanh tốt', 'Giá hợp lý').
+Nhược điểm: Điểm yếu ngắn gọn (ví dụ: 'Nặng', 'Không chống nước').
+Link mua hàng: Nút affiliate dẫn đến trang mua.
+Yêu cầu kỹ thuật:
+Frontend: Sử dụng Next.js + Tailwind CSS để tạo giao diện bảng/card so sánh đẹp, responsive.
+Backend: Dùng Firebase hoặc Supabase để lưu database sản phẩm (mỗi sản phẩm có các thuộc tính như tên, loại, giá, rating, tính năng,...).
+AI Logic:
+Sử dụng LangChain hoặc OpenAI API để phân loại sản phẩm cùng loại dựa trên tên, danh mục, và mô tả.
+AI tự động truy xuất và điền dữ liệu vào bảng so sánh từ database.
+Tương tác: Khi người dùng click sản phẩm, hiển thị danh sách gợi ý cùng loại (tối đa 3-4 sản phẩm), với checkbox để chọn sản phẩm cần so sánh.
+Kịch bản hoạt động:
+Người dùng vào trang danh mục (ví dụ: 'Tai nghe'), chọn sản phẩm 'Sony WH-1000XM5'.
+AI hiển thị danh sách gợi ý: 'Bose QuietComfort 45', 'Apple AirPods Max', 'JBL Tour One'.
+Người dùng tick chọn 2-3 sản phẩm, nhấn 'So sánh ngay'.
+Hiển thị bảng/card so sánh với các tiêu chí: Giá, Thương hiệu, Rating, Tính năng, Trọng lượng, Bảo hành, Ưu điểm, Nhược điểm, Link mua.
+Yêu cầu mã code:
+Tạo component React (Next.js) cho giao diện so sánh.
+Viết hàm truy vấn AI để tìm sản phẩm cùng loại và điền dữ liệu so sánh.
+Đảm bảo responsive trên mobile và desktop.
+Tích hợp nút affiliate trong bảng/card.
+Dữ liệu mẫu (để AI hiểu):
+Sản phẩm: 'Sony WH-1000XM5'
+Loại: Tai nghe over-ear
+Giá: $399
+Rating: 4.8/5
+Tính năng: Chống ồn, pin 30h, âm bass sâu
+Trọng lượng: 250g
+Bảo hành: 12 tháng
+Ưu điểm: Chất lượng âm thanh đỉnh cao
+Nhược điểm: Giá cao
+Link: [affiliate link]
+Tương tự cho các sản phẩm khác.
